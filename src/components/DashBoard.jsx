@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./DashBoard.css";
-// const API_URL = process.env.REACT_APP_API_URL;
+
 // import axios from "axios";
 
 const DashBoard = () => {
@@ -25,7 +25,7 @@ const DashBoard = () => {
 
     try {
       let response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${keyword}&maxResults=30&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${keyword}&maxResults=30&key=AIzaSyAVieO9ZwEaXedkEkuBgrHRhexpWlunPWk`
       );
 
       if (!response.ok) {
