@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import fetchingYoutubeApi from "../Api";
 import YOUTUBELOGO from "../Images/youtube_logo.webp";
 import "./SearchBar.css";
+import { RxIconName } from 'react-icons/rx';
 import { RxCross2 } from "react-icons/rx";
 import { FaSearch } from "react-icons/fa";
 
