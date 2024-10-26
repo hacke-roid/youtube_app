@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./DashBoard.css";
+// const API_URL = process.env.REACT_APP_API_URL;
 // import axios from "axios";
 
 const DashBoard = () => {
@@ -24,7 +25,7 @@ const DashBoard = () => {
 
     try {
       let response = await fetch(
-        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${keyword}&maxResults=30&key=AIzaSyAVieO9ZwEaXedkEkuBgrHRhexpWlunPWk`
+        `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${keyword}&maxResults=30&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`
       );
 
       if (!response.ok) {
@@ -48,8 +49,8 @@ const DashBoard = () => {
       <div className="display_container">
         {/* <h1>Random Videos</h1> */}
         {videos.map((video, index) => (
-          <div className="container">
-            <div key={index} className="video_container">
+          <div key={video.id.videoId} className="container">
+            <div className="video_container">
               <iframe
                 src={`https://www.youtube.com/embed/${video.id.videoId}`}
                 title={video.snippet.title}
