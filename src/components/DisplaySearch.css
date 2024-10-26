@@ -1,0 +1,39 @@
+.display_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  gap: 0px;
+}
+
+.container {
+  /* border: 2px solid black; */
+  height: 350px;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.video_container {
+  width: 450px;
+  height: 300px;
+  /* border: 2px solid purple; */
+  margin: 10px;
+}
+
+.video_container > iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  border: none;
+}
+
+.page_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
